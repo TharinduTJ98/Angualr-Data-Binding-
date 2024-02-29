@@ -3,7 +3,7 @@
   <img src="assets/images/img1.jpg" alt="hard-drive">
   <div class="cart-item__title">Hard Drive</div>
   <div class="cart-item__price">{{price | currency: "LKR"}}</div>
-  <div class="cart-item__discount">{{'discount' | uppercase}}: <span>{{discount/100 | percent}}</span></div>
+  <div class="cart-item__discount">{{'discount' | uppercase}}: <span [class.highlight] =" discount>5">{{discount | precentage}}</span></div>
   <div class="cart-item__final-price">{{price - (price * discount/100) | currency : "LKR"}}</div>
 </div>
 <div class="control-panel">
