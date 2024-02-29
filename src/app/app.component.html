@@ -1,0 +1,20 @@
+<h1>Vanila JS in Action</h1>
+<div class="cart-item">
+  <img src="assets/images/img1.jpg" alt="hard-drive">
+  <div class="cart-item__title">Hard Drive</div>
+  <div class="cart-item__price">{{price | currency: "LKR"}}</div>
+  <div class="cart-item__discount">{{'discount' | uppercase}}: <span>{{discount/100 | percent}}</span></div>
+  <div class="cart-item__final-price">{{price - (price * discount/100) | currency : "LKR"}}</div>
+</div>
+<div class="control-panel">
+  <div class="from-group">
+    <label>Price:</label>
+    <!-- <input #txtprice  id="txt-price" type="number" placeholder="Price" min="0" [value]="price" (input)="updatePrice(txtprice.value)"> -->
+    <input type="number" placeholder="Price" min="0" [(ngModel)] ="price">
+  </div>
+  <div class="from-group">
+    <label>Discount:</label>
+    <!-- <input #txtdiscount id="txt-discount" type="number" placeholder="Discount" min="0" [value]="discount" (input)="updateDiscount(txtdiscount.value)"> -->
+    <input type="number" placeholder="Discount" min="0" [(ngModel)] ="discount">
+  </div>
+</div>
