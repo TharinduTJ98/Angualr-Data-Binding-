@@ -9,4 +9,8 @@ export class AppComponent {
   price = 100;
   discount = 5;
 
+  priceChecker(): string{
+    const finalPrice = this.price - (this.price * this.discount/100);
+    return finalPrice > 100 ? 'lightblue' : 'lightgray';
+  }
 }
